@@ -86,7 +86,7 @@ export default function ProductsPage() {
       toast({
         title: "Success",
         description: "Product deleted successfully",
-        variant: "destructive",
+        variant: "success",
       });
     } catch (error) {
       toast({
@@ -158,7 +158,8 @@ export default function ProductsPage() {
             description: `Product ${
               selectedProduct ? "updated" : "created"
             } successfully`,
-            className: "bg-green-500 text-white",
+            variant: "success",
+            // className: "bg-green-500 text-white",
           });
         }}
       />

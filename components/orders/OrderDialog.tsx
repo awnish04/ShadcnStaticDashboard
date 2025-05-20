@@ -82,6 +82,7 @@ export function OrderDialog({
       toast({
         title: "Success",
         description: `Order ${order?.id ? "updated" : "created"} successfully`,
+        variant: "success",
       });
 
       onSuccess();

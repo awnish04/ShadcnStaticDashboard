@@ -44,13 +44,14 @@ export function Sidebar() {
       >
         <div className="h-full px-3 py-4">
           <div className="mb-4 flex items-center justify-center object-cover w-full">
-            <Image
+            {/* <Image
               src="/amplify.webp" // No need to specify 'public' because it's implicitly included
               alt="Amplify Image"
               width={20} // Adjusted size to make it more visible
               height={20} // Adjusted size to make it more visible
               className="h-14 w-40 bg-white rounded-md object-contain"
-            />
+            /> */}
+            
           </div>
           
 

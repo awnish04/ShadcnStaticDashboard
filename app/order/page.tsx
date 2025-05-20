@@ -30,7 +30,6 @@ import { useActivePage } from "hooks/use-active-page";
 const ITEMS_PER_PAGE = 6;
 
 export default function OrderListPage() {
-
   const pageTitle = useActivePage();
   const [orders, setOrders] = useState<OrderType[]>(initialOrders);
   const [currentPage, setCurrentPage] = useState(1);
@@ -129,7 +128,7 @@ export default function OrderListPage() {
       toast({
         title: "Export Complete",
         description: "Excel file downloaded successfully",
-        variant: "default",
+        variant: "success",
       });
     }, 1500);
   };
@@ -154,7 +153,7 @@ export default function OrderListPage() {
     toast({
       title: "Success",
       description: `${selectedOrders.length} orders marked as shipped`,
-      variant: "default",
+      variant: "success",
     });
   };
 
@@ -168,7 +167,7 @@ export default function OrderListPage() {
     toast({
       title: "Success",
       description: `${selectedOrders.length} orders deleted successfully`,
-      variant: "default",
+      variant: "success",
     });
   };
 
@@ -268,6 +267,7 @@ export default function OrderListPage() {
     toast({
       title: "Invoice Generated",
       description: `Invoice for ${orderId} (${order?.customer}) has been downloaded.`,
+      variant: "success",
     });
   };
 
@@ -306,7 +306,7 @@ export default function OrderListPage() {
       toast({
         title: "Success",
         description: "Order deleted successfully",
-        variant: "default",
+        variant: "success",
       });
     } catch (error) {
       toast({
@@ -434,9 +434,7 @@ export default function OrderListPage() {
           totalPages={totalPages}
           onPageChange={setCurrentPage}
         />
-
       )}
-      
 
       <OrderDialog
         open={isOrderDialogOpen}

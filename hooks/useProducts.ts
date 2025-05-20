@@ -30,7 +30,8 @@ export const useProducts = () => {
   const totalPages = Math.ceil(products.length / ITEMS_PER_PAGE);
 
   const deleteProduct = (id: string) => {
-    setProducts((prev) => prev.filter((product) => product.id !== id));
+    // setProducts((prev) => prev.filter((product) => product.id !== id));
+    setProducts((prev) => prev.filter((product) => product.productId !== id));
   };
 
   return {
